@@ -1,0 +1,25 @@
+{
+    "name": "dcmdb-support",
+    "displayName": "dcmdb-support",
+    "description": "Adds support for the custom input language for the dcmdb project (https://github.com/dwrolvink/dcmdb).",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "stid",
+            "aliases": ["Simple Textual Input Definition", "stid"],
+            "extensions": [".stid"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "stid",
+            "scopeName": "source.stid",
+            "path": "./syntaxes/stid.tmLanguage.json"
+        }]
+    }
+}

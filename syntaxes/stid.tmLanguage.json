@@ -1,0 +1,42 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Simple Textual Input Definition",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"name": "comment.line",
+			"match": "\\#\\s.*"
+		},
+		{
+			"name": "markup.bold.markdown",
+			"match": "(?<=\\+ ).*"
+		},
+		{
+			"name": "string.quoted.double",
+			"match": "(?<=:).*"
+		},
+		{
+			"name": "keyword.control",
+			"match": "^[^:\\+]*\\/.*"
+		}
+	],
+	"repository": {	
+		"strings": {
+			"name": "string.quoted.double.stid",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.stid",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.stid"
+}
